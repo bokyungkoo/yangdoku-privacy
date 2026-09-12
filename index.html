@@ -53,6 +53,7 @@
 <li>제한된 앱 상태 신호: 화면 이름과 오류/예외/검사 실패의 종류</li>
 </ul>
 <p>운영 이벤트 본문에는 이름, 이메일, 전화번호, 주소, 생년월일, 광고 ID, 기기 ID, 정답 데이터, 현재 보드 입력 상태, 원문 오류 메시지, 스택 트레이스, 결제 영수증, 구매 토큰, 거래 ID, 카드 정보가 포함되지 않습니다.</p>
+<p>운영 이벤트 업로드가 처음 활성화될 때에는 업데이트 전에 기기에 기록되어 남아 있는 최근 90일 이내의 동일한 운영 이벤트도 체감 난이도 분석을 위해 한 차례 전송될 수 있습니다. 이는 사용자가 앱을 업데이트하고 기존 앱 데이터를 유지한 경우에만 가능하며, 90일보다 오래된 기록과 검증을 통과하지 못한 기록은 전송되지 않습니다.</p>
 <p>원시 운영 이벤트는 난이도 분석과 서비스 품질 확인에 필요한 기간 동안만 보관합니다. 현재 운영 기준은 원시 이벤트 최대 90일 보관이며, 일 단위&#183;퍼즐 단위 익명 집계값은 더 오래 보관할 수 있습니다.</p>
 <p>Unity의 분석, 크래시 보고, 성능 보고 기능은 꺼져 있습니다.</p>
 <h2>3. 외부 서비스</h2>
@@ -113,6 +114,7 @@
 <li>limited app health signals: scene name and the kind of error, exception, or assertion</li>
 </ul>
 <p>Operations-event payloads do not include your name, email address, phone number, address, date of birth, advertising ID, device ID, answer/solution data, current board marks, raw error messages, stack traces, payment receipts, purchase tokens, transaction IDs, or card information.</p>
+<p>When operations-event upload is first enabled, the same operations events that were recorded before the update and remain on the device from the preceding 90 days may also be sent once for perceived-difficulty analysis. This is possible only when a user updates the app and keeps the existing app data. Records older than 90 days and records that fail validation are not sent.</p>
 <p>Raw operations events are kept only as long as needed for difficulty analysis and service-quality review. The current operations standard is to retain raw events for up to 90 days. Anonymous daily and per-puzzle aggregates may be kept longer.</p>
 <p>Unity analytics, crash reporting, and performance reporting are turned off.</p>
 <h2>3. Third-party services</h2>
